@@ -177,6 +177,7 @@ background-color:#aaa;
 }
 
 .espace{height: 100vh; overflow: hidden;}
+.petit-espace{height: 50vh;}
 
 .portfolio{
   background-color: rgba(60,100,100,.4);
@@ -233,6 +234,10 @@ position: absolute;
   text-align:center;
 }
 
+.exclusion{mix-blend-mode: exclusion;}
+.luminosity{mix-blend-mode: luminosity;}
+.darken{mix-blend-mode: darken;}
+
 .sidenav {
   display: flex;
   justify-content: center;
@@ -240,7 +245,7 @@ position: absolute;
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 50;
   top: 0;
   left: 0;
   /* mix-blend-mode: exclusion; */
@@ -448,6 +453,9 @@ li:hover{font-family: 'Chapman'; font-style: italic;}
 
   .hide{visibility: hidden;}
 
+  .exclusion{mix-blend-mode: normal;}
+  .luminosity{mix-blend-mode: normal;}
+  .darken{mix-blend-mode: normal;}
 }
 
 @media only screen and (min-width: 700px) {

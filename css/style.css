@@ -3,6 +3,10 @@ scroll-behavior: smooth !important;
 /* cursor: none; */
 }
 
+:root {
+         color-scheme: light only;
+       }
+
 ::-moz-selection { /* Code for Firefox */
   color: black;
   background: white;
@@ -73,7 +77,6 @@ canvas {
             }
 
 html, body {
-
   font-family: 'Chapman';
   font-style: normal;
   font-weight: normal;
@@ -107,23 +110,19 @@ section{
 img, video, iframe{z-index: 1;}
 
 #menu{height: 94%; padding-top: 10%;  padding-left: 10%; padding-bottom:10%; padding-right: 10%;}
+
 #nom{
   transition: letter-spacing 200ms ease;
   font-style: normal;
   font-weight: bold;
   position: fixed;
   line-height: 0.7rem;}
-/* #langue{
-  position: fixed;
-  bottom: 5%;
-  font-size: 36px;
-} */
 
 #projets{
 position: fixed;
 top: 20%;
-
 }
+
 .custom-cursor{
   /* position: fixed; */
   /* opacity: 1;
@@ -137,6 +136,7 @@ top: 20%;
   transform: translate(-50%, -50%) scale(.3);
   z-index: 1000; */
 }
+
 .custom-cursor--link {
   /* transform: translate(-50%, -50%) scale(1); */
 }
@@ -184,16 +184,16 @@ background-color:#aaa;
 
   padding-left: 3rem;
   padding-right: 3rem;
-scroll-behavior: smooth;
-overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-height: 100%;
-/* margin-top: 4.5%; */
-/* width: 70%; */
-box-sizing: border-box;
-position: absolute;
-/* border-style: solid; */
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  height: 100%;
+  /* margin-top: 4.5%; */
+  /* width: 70%; */
+  box-sizing: border-box;
+  position: absolute;
+  /* border-style: solid; */
 }
 
 .portfolio-titre{
@@ -225,10 +225,8 @@ position: absolute;
 }
 
 .portfolio-image{
-
   justify-content: center;
   align-items: center;
-
   display: flex;
   width: 40%;
   text-align:center;
@@ -474,11 +472,6 @@ li:hover{font-family: 'Chapman'; font-style: italic;}
 @media only screen and (min-width: 1200px) {
     .left {mix-blend-mode: exclusion; background-color:#aaa; width: 25%;}
 }
-
-
-
-
-
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px; z-index: 40; }

@@ -29,8 +29,6 @@ function draw() {
     //grille
     grille();
 
-
-
     }
 
 function ligne(){

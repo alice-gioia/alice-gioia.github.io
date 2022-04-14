@@ -126,8 +126,8 @@ li{
 
 .smallnav{
   right:2%;
-  top: 20%;
-  z-index: 100;
+  top: 11%;
+  z-index: 30;
   position: fixed;
 }
 
@@ -429,6 +429,7 @@ text-decoration:  line-through;
 
 
 .menu-hover{
+
   writing-mode: vertical-rl;
   text-orientation: mixed;
   list-style: none;
@@ -438,7 +439,7 @@ text-decoration:  line-through;
 
   mix-blend-mode: luminosity;
   list-style-position: inside;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   background: rgba(0,0,0,.4);
   border-radius: 30px;
   margin: 0.1rem;

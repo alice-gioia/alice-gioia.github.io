@@ -253,7 +253,11 @@ background-color:#aaa;
 }
 
 .portfolio-titre{
+  background: rgba(0,0,0,.3);
+  border-radius: 30px;
   margin-top:3rem;
+  color: white;
+  text-align: center;
 }
 
 .portfolio-iframe{
@@ -425,21 +429,29 @@ text-decoration:  line-through;
 
 
 .menu-hover{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   list-style: none;
+
+  text-align: center;
+  vertical-align: middle;
+
   mix-blend-mode: luminosity;
   list-style-position: inside;
-  font-size: 2rem;
-  /* background: rgba(0,0,0,.4); */
+  font-size: 0.9rem;
+  background: rgba(0,0,0,.4);
   border-radius: 30px;
-  margin: 0.3rem;
+  margin: 0.1rem;
   line-height: 1.3rem;
-  text-align: right;
+  /* text-align: center; */
   padding: 0.3rem;
   color: white;
 /* text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; */
 }
 .menu-hover:hover{
+  background: rgba(255,255,255,.4);
   color: black;
+  font-size: 1.2rem;
   /* font-size: 1.5rem;
     margin: 1rem;
   background: rgba(255,255,255,1);

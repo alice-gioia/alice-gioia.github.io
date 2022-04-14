@@ -125,7 +125,7 @@ li{
 }
 
 .smallnav{
-  right:2%;
+  right:0%;
   top: 11%;
   z-index: 30;
   position: fixed;
@@ -224,6 +224,7 @@ background-color:#aaa;
   /* border-style: solid; */
   /* width: 75%; */
     background-color: rgba(60,100,100,.4);
+    text-align: center;
 }
 
 .row:after {
@@ -282,6 +283,7 @@ background-color:#aaa;
   /* padding: 1rem; */
   line-height: 2rem;
   font-weight: lighter;
+  text-align: left;
 }
 
 .portfolio-image{
@@ -440,7 +442,7 @@ text-decoration:  line-through;
   mix-blend-mode: luminosity;
   list-style-position: inside;
   font-size: 0.8rem;
-  background: rgba(0,0,0,.4);
+  background: rgba(0,0,0,.3);
   border-radius: 30px;
   margin: 0.1rem;
   line-height: 1.3rem;
@@ -473,11 +475,13 @@ text-decoration:  line-through;
   h2{font-size: 1.2rem;}
   h3{font-size: 1rem;}
   h4{font-size: 0.9rem;}
-  p{font-size: 0.8rem;}
+  p{font-size: 0.8rem; }
   /* li{font-size: 1rem;} */
   ul{ }
 
-
+  .portfolio-texte{
+    text-align: center;
+  }
 
 
   .lang-btn{

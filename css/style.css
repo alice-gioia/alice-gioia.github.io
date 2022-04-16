@@ -233,6 +233,8 @@ background-color:#aaa;
   clear: both;
 }
 
+.hide{visibility: visible;}
+
 .espace{height: 100vh; overflow: hidden;}
 .petit-espace{height: 50vh;}
 
@@ -255,6 +257,10 @@ background-color:#aaa;
 
 .portfolio-titre{
   background: rgba(0,0,0,.3);
+  /* margin-left:20%;
+   margin-right:20%; */
+   /* padding-top: 1rem; */
+   /* padding : 0.1rem; */
   border-radius: 30px;
   margin-top:3rem;
   color: white;

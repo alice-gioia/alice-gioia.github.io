@@ -3,6 +3,24 @@ scroll-behavior: smooth !important;
 /* cursor: none; */
 }
 
+:root {
+         color-scheme: light only;
+       }
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: white;
+}
+
+::selection {
+  color: black;
+  background: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth !important;
+}
 
 @font-face {
   font-family: 'ReadexPro';
@@ -59,7 +77,6 @@ canvas {
             }
 
 html, body {
-
   font-family: 'Chapman';
   font-style: normal;
   font-weight: normal;
@@ -78,8 +95,64 @@ h3{font-size: 1.3rem;}
 h4{font-size: 1rem;}
 p{font-size: 0.9rem;}
 
-li{ list-style-type: decimal;font-family: 'Chapman'; font-size: 1.4rem; font-style: normal; line-height: 2.4rem;}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.4rem;
+}
+
+li{
+  list-style-type: decimal;
+  font-family: 'Chapman';
+  font-size: 1.4rem;
+  font-style: normal;
+  line-height: 2.4rem;
+  margin-left: 1rem;
+ list-style-position: inside;
+}
+
+.list-bullet{
+  list-style-type: none;
+  font-family: 'Chapman';
+  font-size: 1.2rem;
+  font-style: normal;
+  /* line-height: 2.4rem; */
+  margin: 0;
+  margin-left: 0;
+  /* pr le html */
+  /*  <li> <img src="img/icn/bullet1.svg" style="margin-top:-1rem; margin-bottom:0rem;" height="50rem"/><div class="menu"><a href="#Citadelle"> 1.  Citadelle</a></div></li>*/
+}
+
+.smallnav{
+  right:0%;
+  top: 11%;
+  z-index: 30;
+  position: fixed;
+}
+
 a{  color: inherit;  text-decoration: none;}
+
+.lien-ref{
+font-style: italic;
+}
+
+.menu{
+  margin-top:15%;
+  /* margin-left:3rem; */
+  text-align: left;
+}
+
+.bullet{
+  /* content:url("img/icn/bullet1.svg"); */
+  transform: scaleX(-1);
+  margin-top:-1rem;
+  margin-bottom:0rem;
+  right:0;
+  height: 2.4rem;
+
+}
+
 
 section{
   scroll-behavior: smooth !important;
@@ -90,24 +163,22 @@ section{
   vertical-align: middle;
 }
 
+img, video, iframe{z-index: 1;}
+
 #menu{height: 94%; padding-top: 10%;  padding-left: 10%; padding-bottom:10%; padding-right: 10%;}
+
 #nom{
   transition: letter-spacing 200ms ease;
   font-style: normal;
   font-weight: bold;
   position: fixed;
   line-height: 0.7rem;}
-#langue{
-  position: fixed;
-  bottom: 5%;
-  font-size: 36px;
-}
 
 #projets{
 position: fixed;
 top: 20%;
-
 }
+
 .custom-cursor{
   /* position: fixed; */
   /* opacity: 1;
@@ -121,11 +192,13 @@ top: 20%;
   transform: translate(-50%, -50%) scale(.3);
   z-index: 1000; */
 }
+
 .custom-cursor--link {
   /* transform: translate(-50%, -50%) scale(1); */
 }
 
 .btn{
+  cursor: pointer;
   background-color: black;
   color: white;
   border-radius: 30px;
@@ -137,20 +210,21 @@ top: 20%;
 }
 
 .column {
-
   height: 100vh;
   float: left;
-
 }
 
 .left {
-
+mix-blend-mode: exclusion;
+background-color:#aaa;
   width: 25%;
 }
 
 .right {
-  width: 75%;
+  /* border-style: solid; */
+  /* width: 75%; */
     background-color: rgba(60,100,100,.4);
+    text-align: center;
 }
 
 .row:after {
@@ -159,63 +233,88 @@ top: 20%;
   clear: both;
 }
 
+.hide{visibility: visible;}
+
 .espace{height: 100vh; overflow: hidden;}
+.petit-espace{height: 50vh;}
 
 .portfolio{
+  background-color: rgba(60,100,100,.4);
 
   padding-left: 3rem;
   padding-right: 3rem;
-scroll-behavior: smooth;
-overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-height: 100%;
-/* margin-top: 4.5%; */
-width: 70%;
-box-sizing: border-box;
-position: absolute;
-/* border-style: solid; */
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  height: 100%;
+  /* margin-top: 4.5%; */
+  /* width: 70%; */
+  box-sizing: border-box;
+  position: absolute;
+  /* border-style: solid; */
 }
+
 
 .portfolio-titre{
+
+  background: rgba(0,0,0,.3);
+  /* margin-left:20%;
+   margin-right:20%; */
+   /* padding-top: 1rem; */
+   /* padding : 0.1rem; */
+  border-radius: 30px;
   margin-top:3rem;
+  color: white;
+  text-align: center;
 }
 
-.portfolio-video{
+.portfolio-iframe{
   margin-top:4rem;
   margin-bottom:2rem;
+  width: 100%;
+  height: 56.25%;
+  max-width: 100%;
+  max-height: 56.25%;
+}
 
+.portfolio-iframe{
+  margin-top:4rem;
+  margin-bottom:2rem;
 }
 
 .portfolio-texte{
-  font-family: Helvetica;
+  /* font-family: Helvetica; */
   margin-top: 2rem;
   margin-bottom: 2rem;
   /* background-color: #ddd; */
   /* padding: 1rem; */
   line-height: 2rem;
   font-weight: lighter;
+  text-align: left;
 }
 
 .portfolio-image{
-
   justify-content: center;
   align-items: center;
-
   display: flex;
   width: 40%;
   text-align:center;
 }
 
-.sidenav {
+.exclusion{mix-blend-mode: exclusion;}
+.luminosity{mix-blend-mode: luminosity;}
+.darken{mix-blend-mode: darken;}
+.multiply{mix-blend-mode: multiply; filter: contrast(1.2);}
 
+.sidenav {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 50;
   top: 0;
   left: 0;
   /* mix-blend-mode: exclusion; */
@@ -236,6 +335,23 @@ position: absolute;
 
 .sidenav a:hover{
 
+}
+
+.lang-btn{
+  position: absolute;
+  z-index: 40;
+    left:0;
+    bottom:0;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    /* font-size: 36px; */
+}
+
+.about-btn {position : absolute;
+  right:0;
+  top:0;
+  margin-right: 4%;
+  margin-top: 4%;
 }
 
 .closebtn {
@@ -264,11 +380,36 @@ overflow:hidden; position: absolute ;clip-path: polygon(50% 0%, 55% 30%, 90% 35%
   margin-top: 0px;
 }
 
+.video-responsive {
+margin-top:2rem;
+margin-bottom:2rem;
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+
+.video-responsive iframe {
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+/*
+.plein{width: 100%;}
+.demi{width: 49.6%;}
+.tiers{width: 32.5%;} */
+
 .btn:hover{background-color: #bbb; color:black;  transition: .2s ease-in-out;}
 
 li:hover{font-family: 'Chapman'; font-style: italic;}
 
 .who:hover{font-style: italic;}
+
+
+
 
 .anim:after{
   position: absolute;
@@ -287,25 +428,168 @@ li:hover{font-family: 'Chapman'; font-style: italic;}
 .anim:hover:after{width: 100%;}
 #nom:hover{color: rgb(228, 240, 248);letter-spacing: .1em;}
 
-@media (max-width: 700px) {
+
+
+
+.lien-ref:hover{
+font-style: italic;
+color:white;
+text-decoration:  line-through;
+}
+
+
+.menu-hover{
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  list-style: none;
+
+  text-align: center;
+  vertical-align: middle;
+
+  mix-blend-mode: luminosity;
+  list-style-position: inside;
+  font-size: 0.8rem;
+  background: rgba(0,0,0,.3);
+  border-radius: 30px;
+  margin: 0.1rem;
+  line-height: 1.3rem;
+  /* text-align: center; */
+  padding: 0.3rem;
+  color: white;
+/* text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black; */
+}
+.menu-hover:hover{
+  background: rgba(255,255,255,.4);
+  color: black;
+  font-size: 1.2rem;
+  /* font-size: 1.5rem;
+    margin: 1rem;
+  background: rgba(255,255,255,1);
+  border-radius: 30px; */
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 700px) {
+  h1{font-size: 1.8rem;}
+  h2{font-size: 1.2rem;}
+  h3{font-size: 1rem;}
+  h4{font-size: 0.9rem;}
+  p{font-size: 0.8rem; }
+  /* li{font-size: 1rem;} */
+  ul{ }
+
+  .portfolio-texte{
+    text-align: center;
+  }
+
+
+  .lang-btn{
+    z-index: 40;
+      left:0;
+      bottom:0;
+      margin-left: 4%;
+      margin-bottom: 4%;
+      /* font-size: 36px; */
+  }
+
+  .btn{padding:4px;font-size: .8rem; z-index: 40;}
+  #nom{line-height: 0.5rem;}
+  .about{font-size: 1rem;}
+  .who{font-size: 1.6rem; }
   .star{height: 80px;width: 70px;}
   .star1{height: 60px;width: 50px;}
-
   .portfolio{
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    height: 80%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 5%;
-    left: 0;
-    text-align:center;
+    background-color: rgba(80,100,100,0.6);
+    padding-left: 4%;
+    padding-right: 4%;
+    scroll-behavior: smooth;
+  /* border-style: solid; */
+
+      justify-content: center;
+      align-items: center;
+      /* border-radius: 30px; */
+      /* border-style: solid;
+      border-color: black;
+      border-width: thick; */
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 10;
+      margin-top: 0%;
+      left: 0;
+      text-align:center;
   }
+  .sidenav { z-index: 40; }
+  .navigation{
+    z-index: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    padding-left: 0%;padding-right:0%;padding-bottom: 0%;
+  padding-top: 0%;z-index: 10;display: flex;position : fixed;
+  /* mix-blend-mode: exclusion; background-color:#aaa; */
+}
+
+  #menu{ margin-top: 0%; padding-top: 1%;padding-left: 4%;padding-bottom:4%;padding-right: 4%;}
+
+  .column {height: 100%;
+  float: left;}
+
+  .left {
+  z-index: 50;
+  top:0;
+  left:0;
+  height:10%;
+  width: 100%;
+  mix-blend-mode: exclusion;
+  background-color:#aaa;
+}
+
+  .right { position: fixed;
+  top: 10%;z-index: 11;
+  /* background-color: rgba(60,100,100,.4); */
+  width: 100%; height:100%;
+  /* border-style: solid; */
+}
+
+  .hide{visibility: hidden;}
+
+  .exclusion{mix-blend-mode: normal;}
+  .luminosity{mix-blend-mode: normal;}
+  .darken{mix-blend-mode: normal;}
+  .multiply{mix-blend-mode: normal; filter: none;}
+
+}
+
+@media only screen and (min-width: 700px) {
+  .left {mix-blend-mode: exclusion; background-color:#aaa; width: 35%;}
+  .show{visibility: hidden;}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .left {mix-blend-mode: exclusion; background-color:#aaa; width: 30%;}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .left {mix-blend-mode: exclusion; background-color:#aaa; width: 25%;}
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 15px; z-index: 40; }
   .sidenav a {font-size: 18px;}
 }
